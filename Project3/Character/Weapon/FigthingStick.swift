@@ -1,5 +1,5 @@
 //
-//  Dwarf.swift
+//  TwoHandsGlave.swift
 //  Project3
 //
 //  Created by Gaelle Lefeuvre on 02/03/2018.
@@ -8,8 +8,10 @@
 
 import Foundation
 
-class Dwarf: Character {
+// Creation Colossus'weapon
+
+class FightingStick: Weapon {
     init() {
-        super.init(name: "name", life: 80, weapon: Axe())
+        super.init(damage: 7, healingStrength: 10)
     }
 }

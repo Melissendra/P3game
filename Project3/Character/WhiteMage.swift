@@ -10,6 +10,6 @@ import Foundation
 
 class WhiteMage: Character {
     init() {
-        super.init(name: WhiteMage, life: 75, weapon: AshStaff)
+        super.init(name: "name", life: 75, weapon: Staff())
     }
 }

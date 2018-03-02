@@ -15,7 +15,7 @@ class Character {
     var weapon: Weapon
 
     
-// Methodes' initialization
+// properties' initialization
     init(name: String, life: Int, weapon: Weapon) {
         self.name = name
         self.life = life

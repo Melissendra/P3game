@@ -1,5 +1,5 @@
 //
-//  Dwarf.swift
+//  Glave.swift
 //  Project3
 //
 //  Created by Gaelle Lefeuvre on 02/03/2018.
@@ -8,8 +8,9 @@
 
 import Foundation
 
-class Dwarf: Character {
+// creation of warriors' weapon
+class Glave: Weapon {
     init() {
-        super.init(name: "name", life: 80, weapon: Axe())
+        super.init(damage: 10, healingStrength: 0)
     }
 }

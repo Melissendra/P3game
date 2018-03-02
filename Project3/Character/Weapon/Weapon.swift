@@ -8,6 +8,15 @@
 
 import Foundation
 
+// creation Weapon Main class
 class Weapon {
+    var damage: Int
+    var healingStrength: Int
     
+    
+// Properties' initialization
+    init(damage: Int, healingStrength: Int) {
+        self.damage = damage
+        self.healingStrength = healingStrength
+    }
 }

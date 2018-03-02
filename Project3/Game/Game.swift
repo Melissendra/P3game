@@ -1,5 +1,5 @@
 //
-//  Dwarf.swift
+//  Game.swift
 //  Project3
 //
 //  Created by Gaelle Lefeuvre on 02/03/2018.
@@ -7,9 +7,3 @@
 //
 
 import Foundation
-
-class Dwarf: Character {
-    init() {
-        super.init(name: "name", life: 80, weapon: Axe())
-    }
-}
