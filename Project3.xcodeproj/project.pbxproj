@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F70E083204944AD00AE2BBE /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70E082204944AD00AE2BBE /* Weapon.swift */; };
+		8F70E0862049462300AE2BBE /* WhiteMage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70E0852049462300AE2BBE /* WhiteMage.swift */; };
+		8F70E088204946D000AE2BBE /* Colossus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70E087204946D000AE2BBE /* Colossus.swift */; };
+		8F70E08A204947C200AE2BBE /* Dwarf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70E089204947C200AE2BBE /* Dwarf.swift */; };
 		8FC9A1032047F34D0005C513 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9A1022047F34D0005C513 /* main.swift */; };
 		8FC9A10C2047F4230005C513 /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9A10B2047F4230005C513 /* Warrior.swift */; };
 		8FC9A1102047F4A30005C513 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9A10F2047F4A30005C513 /* Character.swift */; };
@@ -25,6 +29,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8F70E082204944AD00AE2BBE /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		8F70E0852049462300AE2BBE /* WhiteMage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteMage.swift; sourceTree = "<group>"; };
+		8F70E087204946D000AE2BBE /* Colossus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colossus.swift; sourceTree = "<group>"; };
+		8F70E089204947C200AE2BBE /* Dwarf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dwarf.swift; sourceTree = "<group>"; };
 		8FC9A0FF2047F34D0005C513 /* Project3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Project3; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC9A1022047F34D0005C513 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8FC9A10B2047F4230005C513 /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
@@ -42,6 +50,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F70E084204944E200AE2BBE /* Weapon */ = {
+			isa = PBXGroup;
+			children = (
+				8F70E082204944AD00AE2BBE /* Weapon.swift */,
+			);
+			path = Weapon;
+			sourceTree = "<group>";
+		};
+		8F80F4D9204862A000932B20 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				8FC9A10F2047F4A30005C513 /* Character.swift */,
+				8F70E0852049462300AE2BBE /* WhiteMage.swift */,
+				8F70E087204946D000AE2BBE /* Colossus.swift */,
+				8F70E089204947C200AE2BBE /* Dwarf.swift */,
+				8FC9A10B2047F4230005C513 /* Warrior.swift */,
+				8F70E084204944E200AE2BBE /* Weapon */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
 		8FC9A0F62047F34D0005C513 = {
 			isa = PBXGroup;
 			children = (
@@ -61,9 +90,8 @@
 		8FC9A1012047F34D0005C513 /* Project3 */ = {
 			isa = PBXGroup;
 			children = (
-				8FC9A10F2047F4A30005C513 /* Character.swift */,
 				8FC9A1022047F34D0005C513 /* main.swift */,
-				8FC9A10B2047F4230005C513 /* Warrior.swift */,
+				8F80F4D9204862A000932B20 /* Character */,
 			);
 			path = Project3;
 			sourceTree = "<group>";
@@ -127,7 +155,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FC9A10C2047F4230005C513 /* Warrior.swift in Sources */,
+				8F70E083204944AD00AE2BBE /* Weapon.swift in Sources */,
+				8F70E0862049462300AE2BBE /* WhiteMage.swift in Sources */,
 				8FC9A1102047F4A30005C513 /* Character.swift in Sources */,
+				8F70E088204946D000AE2BBE /* Colossus.swift in Sources */,
+				8F70E08A204947C200AE2BBE /* Dwarf.swift in Sources */,
 				8FC9A1032047F34D0005C513 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

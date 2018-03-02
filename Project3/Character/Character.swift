@@ -13,15 +13,12 @@ class Character {
     let name: String
     var life: Int
     var weapon: Weapon
-    var features: Feature
-    var clothes: String
+
     
 // Methodes' initialization
-    init(name: String, life: Int, weapons: String, features: Features, clothes: String) {
+    init(name: String, life: Int, weapon: Weapon) {
         self.name = name
         self.life = life
-        self.weapon = Weapons
-        self.features = features
-        self.clothes = clothes
+        self.weapon = weapon
     }
 }
