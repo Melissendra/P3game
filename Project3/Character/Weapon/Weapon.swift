@@ -10,13 +10,21 @@ import Foundation
 
 // creation Weapon Main class
 class Weapon {
+    var type: String
     var damage: Int
     var healingStrength: Int
     
     
 // Properties' initialization
-    init(damage: Int, healingStrength: Int) {
+    init(type: String, damage: Int, healingStrength: Int) {
+        self.type = type
         self.damage = damage
         self.healingStrength = healingStrength
+    }
+    
+// Methods
+    
+    func weaponsDescription () {
+        print(type + " - strength: \(damage)" + " - healing: \(healingStrength).")
     }
 }

@@ -10,15 +10,20 @@ import Foundation
 
 // Creation class characters for specificities
 class Character {
-    let name: String
+    let type: String
     var life: Int
     var weapon: Weapon
 
     
 // properties' initialization
-    init(name: String, life: Int, weapon: Weapon) {
-        self.name = name
+    init(type: String, life: Int, weapon: Weapon) {
+        self.type = type
         self.life = life
         self.weapon = weapon
+    }
+    
+// Method
+    func characthersDescription() {
+        print(type + "\(life)pv" + "\(weapon)")
     }
 }

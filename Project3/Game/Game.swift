@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class Game {
+    func home() {
+        print("Here are the differents characters you can choose with their attributes!!!")
+        
+    }
+
+}
+

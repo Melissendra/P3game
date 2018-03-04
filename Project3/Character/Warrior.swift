@@ -11,7 +11,7 @@ import Foundation
 class Warrior: Character {
     
     init() {
-        super.init(name: "name", life: 100, weapon: Glave())
+        super.init(type: "Warrior", life: 100, weapon: Glave())
     }
 }
 
