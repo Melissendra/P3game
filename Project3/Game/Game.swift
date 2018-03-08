@@ -9,10 +9,24 @@
 import Foundation
 
 class Game {
+    var teams = [Team]()
+    
     func home() {
-        print("Here are the differents characters you can choose with their attributes!!!")
-        
+        print("Hello ! Here you'll be inviting to choose your equip ! Each equip must contains 3 differents characters. To help you in your choice here are theirs features and singularity ! ")
+    }
+    
+    func start() {
+        home()
+        for _ in 0..<2 {
+        let team = createTeam()
+            teams.append(team)
+        }
+    }
+    
+    func createTeam() -> Team {
+        let team = Team()
+        team.createCharacters()
+    return team
     }
 
 }
-

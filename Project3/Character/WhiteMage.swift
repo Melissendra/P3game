@@ -9,7 +9,7 @@
 import Foundation
 
 class WhiteMage: Character {
-    init() {
-        super.init(type: "Magus", life: 75, weapon: Staff())
+    init(name: String) {
+        super.init(name: name, type: "WhiteMage", life: 75, weapon: Staff())
     }
 }

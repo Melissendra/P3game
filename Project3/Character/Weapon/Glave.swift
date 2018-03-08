@@ -11,6 +11,6 @@ import Foundation
 // creation of warriors' weapon
 class Glave: Weapon {
     init() {
-        super.init(damage: 10, healingStrength: 0)
+        super.init(type: "Glave", damage: 10, healingStrength: 0)
     }
 }

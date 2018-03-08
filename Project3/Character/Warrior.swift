@@ -9,9 +9,9 @@
 import Foundation
 
 class Warrior: Character {
-    
-    init() {
-        super.init(type: "Warrior", life: 100, weapon: Glave())
+    init(name: String) {
+        super.init(name: name,type: "Warrior", life: 100, weapon: Glave())
     }
+    
+    
 }
-

@@ -13,17 +13,20 @@ class Character {
     let type: String
     var life: Int
     var weapon: Weapon
-
+    let name: String
     
 // properties' initialization
-    init(type: String, life: Int, weapon: Weapon) {
+    init(name: String, type: String, life: Int, weapon: Weapon) {
+        self.name = name
         self.type = type
         self.life = life
         self.weapon = weapon
     }
     
 // Method
-    func characthersDescription() {
-        print(type + "\(life)pv" + "\(weapon)")
+    func description() {
+        print("")
+        print(type + "- \(life) pv" + " - Weapon: \(self.weapon.type)" + " - Damage: \(self.weapon.damage)" + " - HealingStrength: \(self.weapon.healingStrength)")
     }
+    
 }
