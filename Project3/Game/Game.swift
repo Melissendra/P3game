@@ -11,10 +11,12 @@ import Foundation
 class Game {
     var teams = [Team]()
     
+// function to say hello and present what is expect to players
     func home() {
         print("Hello ! Here you'll be inviting to choose your equip ! Each equip must contains 3 differents characters. To help you in your choice here are theirs features and singularity ! ")
     }
-    
+
+// teams creation
     func start() {
         home()
         for _ in 0..<2 {
@@ -28,5 +30,16 @@ class Game {
         team.createCharacters()
     return team
     }
-
+  
+    // showing teams compostion
+    
+    func teamDescription() {
+        _ = teams
+        for team in teams {
+            team.characterAttributes()
+        }
+    }
+    
 }
+
+

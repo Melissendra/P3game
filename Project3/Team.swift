@@ -7,22 +7,13 @@
 //
 
 import Foundation
+
 class Team {
     var characters = [Character]()
-    
-    
-    
-    
-    func createCharacters() {
-        
-        for _ in 0..<3 {
-            guard let character = createCharacter() else { return }
-            characters.append(character)
-        }
-    }
 
+// create first team
     func createCharacter() -> Character? {
-       var userChoice = 0
+        var userChoice = 0
         var character: Character?
         var characterName = ""
         
@@ -30,10 +21,10 @@ class Team {
         print("======================================================")
         print("For forming your equip, you must choose 3 characters differents. What are they?")
         print("Choose the 3 characters you want:")
-        print("1. Magus")
-        print("2. Behemoth")
-        print("3. Gnome")
-        print("4. Gladiator")
+        print("1. Magus: he'll cure you when necessary.")
+        print("2. Behemoth: he'll frigthen your adversary by his height but he doesn't have a lot of strenght !")
+        print("3. Gnome: if he isn't impressive whith is size but his axe'll give a lot pf damage !")
+        print("4. Gladiator: he is a classic: good fighter, not exceptionel but good znd give good damage ! ")
         print("")
         print("======================================================")
         
@@ -56,18 +47,39 @@ class Team {
         case 2:
             let behemoth = Colossus(name: characterName)
             character = behemoth
+            
         case 3:
             let gnome = Dwarf(name: characterName)
             character =  gnome
+            
         case 4:
             let gladiator = Warrior(name: characterName)
             character = gladiator
+            
         default:
             break
         }
         return character
     }
+
+    // create second team
     
+    func createCharacters() {
+        print("")
+        print("Please choose your characters !")
+        
+        for _ in 0..<3 {
+            guard let character = createCharacter() else { return }
+            characters.append(character)
+        }
+    }
+    //characters description
+    func characterAttributes () {
+        for character in characters {
+            character.description()
+        }
+    }
+  
     // change players' choice to Int and unwrap readLine optional
     func inputInt() -> Int {
         guard let data = readLine() else { return 0 }
@@ -79,5 +91,4 @@ class Team {
         guard let data = readLine() else { return ""}
         return data
     }
-    
 }

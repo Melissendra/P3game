@@ -22,11 +22,10 @@ class Character {
         self.life = life
         self.weapon = weapon
     }
-    
-// Method
-    func description() {
+
+    func description(){
         print("")
-        print(type + "- \(life) pv" + " - Weapon: \(self.weapon.type)" + " - Damage: \(self.weapon.damage)" + " - HealingStrength: \(self.weapon.healingStrength)")
+        print(name + ": \(type)" + "- \(life) pv" + " - Weapon: \(self.weapon.type)" + " - Damage: \(self.weapon.damage)" + " - HealingStrength: \(self.weapon.healingStrength)")
     }
     
 }
