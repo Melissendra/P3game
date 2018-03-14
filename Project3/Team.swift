@@ -10,8 +10,8 @@ import Foundation
 
 class Team {
     var characters = [Character]()
-
-// create first team
+    
+    // create first team
     func createCharacter() -> Character? {
         var userChoice = 0
         var character: Character?
@@ -30,7 +30,7 @@ class Team {
         
         
         repeat {
-           userChoice = inputInt()
+            userChoice = inputInt()
         } while userChoice != 1 && userChoice != 2 && userChoice != 3 && userChoice != 4
         
         print("Enter your character's name !")
@@ -47,39 +47,42 @@ class Team {
         case 2:
             let behemoth = Colossus(name: characterName)
             character = behemoth
-            
         case 3:
             let gnome = Dwarf(name: characterName)
             character =  gnome
-            
         case 4:
             let gladiator = Warrior(name: characterName)
             character = gladiator
-            
         default:
             break
         }
         return character
     }
-
+    
     // create second team
     
     func createCharacters() {
-        print("")
-        print("Please choose your characters !")
-        
         for _ in 0..<3 {
             guard let character = createCharacter() else { return }
             characters.append(character)
         }
+        characterAttributes()
     }
+    
     //characters description
     func characterAttributes () {
-        for character in characters {
-            character.description()
+        if characters.count == 3 {
+            print("")
+            print("=======================")
+            for character in characters {
+                character.description()
+        }
+        }else {
+            print("")
+            print("You don't have enough characters in your team!")
         }
     }
-  
+    
     // change players' choice to Int and unwrap readLine optional
     func inputInt() -> Int {
         guard let data = readLine() else { return 0 }
