@@ -23,9 +23,11 @@ class Character {
         self.weapon = weapon
     }
 
-    func description(){
+    func description(index: Int){
         print("")
-        print(name + ": \(type)" + "- \(life) pv" + " - Weapon: \(self.weapon.type)" + " - Damage: \(self.weapon.damage)" + " - HealingStrength: \(self.weapon.healingStrength)")
+        print("\(index). " + name + ": \(type)" + "- \(life) pv" + " - Weapon: \(self.weapon.type)" + " - Damage: \(self.weapon.damage)" + " - HealingStrength: \(self.weapon.healingStrength)")
     }
-    
+    func attack(target: Character) {
+        target.life -= self.weapon.damage
+    }
 }

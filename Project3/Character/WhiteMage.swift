@@ -12,4 +12,8 @@ class WhiteMage: Character {
     init(name: String) {
         super.init(name: name, type: "WhiteMage", life: 75, weapon: Staff())
     }
+    
+    func heal(target:Character) {
+        target.life += 20
+    }
 }

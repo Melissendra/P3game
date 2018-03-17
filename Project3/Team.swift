@@ -30,13 +30,13 @@ class Team {
         
         
         repeat {
-            userChoice = inputInt()
+            userChoice = Input.inputInt()
         } while userChoice != 1 && userChoice != 2 && userChoice != 3 && userChoice != 4
         
-        print("Enter your character's name !")
+        print("Enter your character's name : ")
         
         repeat {
-            characterName = inputString()
+            characterName = Input.inputString()
             
         } while characterName == ""
         
@@ -71,27 +71,16 @@ class Team {
     
     //characters description
     func characterAttributes () {
-        if characters.count == 3 {
+        if characters.count > 0 {
             print("")
             print("=======================")
-            for character in characters {
-                character.description()
-        }
+            for i in 0..<characters.count {
+                let character = characters[i]
+                character.description(index: i+1)
+            }
         }else {
             print("")
             print("You don't have enough characters in your team!")
         }
-    }
-    
-    // change players' choice to Int and unwrap readLine optional
-    func inputInt() -> Int {
-        guard let data = readLine() else { return 0 }
-        guard let dataToInt = Int(data) else {return 0 }
-        return dataToInt
-    }
-    
-    func inputString() -> String {
-        guard let data = readLine() else { return ""}
-        return data
     }
 }
