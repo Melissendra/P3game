@@ -66,7 +66,6 @@ class Team {
             guard let character = createCharacter() else { return }
             characters.append(character)
         }
-        characterAttributes()
     }
     
     //characters description
@@ -76,7 +75,7 @@ class Team {
             print("=======================")
             for i in 0..<characters.count {
                 let character = characters[i]
-                character.description(index: i+1)
+                character.description(index: i + 1)
             }
         }else {
             print("")
@@ -84,3 +83,6 @@ class Team {
         }
     }
 }
+
+
+

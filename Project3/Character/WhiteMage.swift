@@ -10,10 +10,11 @@ import Foundation
 
 class WhiteMage: Character {
     init(name: String) {
-        super.init(name: name, type: "WhiteMage", life: 75, weapon: Staff())
+        super.init(name: name, type: "WhiteMage",life: 75, weapon: Staff(), lifeMax: 75)
     }
     
     func heal(target:Character) {
-        target.life += 20
+        target.life += weapon.healingStrength
+        print("you healed \(weapon.healingStrength) pv to \(target.name)!")
     }
 }
