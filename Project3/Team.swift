@@ -82,6 +82,17 @@ class Team {
             print("You don't have enough characters in your team!")
         }
     }
+    
+    func characterLife() {
+        for i in 0..<3 {
+            let character = characters[i]
+            if character.life > 0 {
+               print("\(character.name) has \(character.life)")
+            }else {
+                print("Your team is dead!")
+            }
+        }
+    }
 }
 
 
