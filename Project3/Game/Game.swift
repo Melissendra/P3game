@@ -30,6 +30,8 @@ class Game {
     func createTeam() -> Team {
         let team = Team()
         team.createCharacters()
+        print("")
+        print("Team 2: ")
     return team
     }
     
@@ -46,12 +48,12 @@ class Game {
                 // selectionner 1 des membres de l'équipe numero 1
                 
                 repeat {
-                    teams[i].characterLife()
                     playerChoice = Input.inputInt()
                 } while playerChoice != 1 && playerChoice != 2 && playerChoice != 3
                 let character = teams[i].characters[playerChoice - 1]
                 print("")
                 print("You choose \(playerChoice)!")
+                chest(character: character)
                 
                 // déterminer si le perso choisi est un mage ou un attaquant
                 
@@ -88,12 +90,14 @@ class Game {
                         print("Choose which characer you want to attack:")
                         
                         repeat {
-                            teams[i + 1].characterLife()
                             playerChoice = Input.inputInt()
                         } while playerChoice != 1 && playerChoice != 2 && playerChoice != 3
                         let adversary = teams[i + 1].characters[playerChoice - 1]
                         // action d'attaquer
                         character.attack(target: adversary)
+                        if teams[i + 1].isDead() {
+                            return
+                        }
                         print("")
                         
                     }else {
@@ -112,12 +116,29 @@ class Game {
                         let adversary = teams[i - 1].characters[playerChoice - 1]
                         // action d'attaquer
                         character.attack(target: adversary)
+                        if teams[i - 1].isDead() {
+                            return
+                        }
                         print("")
                         
                     }
                 }
             }
         }while true
+    }
+    
+    func chest(character: Character) {
+        let randomNumber = arc4random_uniform(15)
+        if randomNumber < 5 {
+            print()
+            if character is WhiteMage {
+                character.weapon = AshStaff()
+            print()
+            }else {
+                character.weapon = TwoHandsGlave()
+            print()
+            }
+        }
     }
 }
 

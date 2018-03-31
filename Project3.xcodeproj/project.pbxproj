@@ -21,6 +21,8 @@
 		8FC9A10C2047F4230005C513 /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9A10B2047F4230005C513 /* Warrior.swift */; };
 		8FC9A1102047F4A30005C513 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9A10F2047F4A30005C513 /* Character.swift */; };
 		8FFA2D72205BC427000B2671 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA2D71205BC427000B2671 /* Input.swift */; };
+		8FFEF10B206A713B003BF8AD /* TwoHandsGlave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFEF10A206A713B003BF8AD /* TwoHandsGlave.swift */; };
+		8FFEF10D206A71D6003BF8AD /* AshStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFEF10C206A71D6003BF8AD /* AshStaff.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +53,8 @@
 		8FC9A10B2047F4230005C513 /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
 		8FC9A10F2047F4A30005C513 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		8FFA2D71205BC427000B2671 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		8FFEF10A206A713B003BF8AD /* TwoHandsGlave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoHandsGlave.swift; sourceTree = "<group>"; };
+		8FFEF10C206A71D6003BF8AD /* AshStaff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AshStaff.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			children = (
 				8F70E082204944AD00AE2BBE /* Weapon.swift */,
 				8F68964B20498E11002F5944 /* Glave.swift */,
+				8FFEF10A206A713B003BF8AD /* TwoHandsGlave.swift */,
+				8FFEF10C206A71D6003BF8AD /* AshStaff.swift */,
 				8F68964D20499000002F5944 /* Staff.swift */,
 				8F68964F20499132002F5944 /* FigthingStick.swift */,
 				8F68965120499740002F5944 /* Axe.swift */,
@@ -192,7 +198,9 @@
 				8FC9A1102047F4A30005C513 /* Character.swift in Sources */,
 				8F68965020499132002F5944 /* FigthingStick.swift in Sources */,
 				8F70E088204946D000AE2BBE /* Colossus.swift in Sources */,
+				8FFEF10D206A71D6003BF8AD /* AshStaff.swift in Sources */,
 				8F689654204999C9002F5944 /* Game.swift in Sources */,
+				8FFEF10B206A713B003BF8AD /* TwoHandsGlave.swift in Sources */,
 				8F68964C20498E11002F5944 /* Glave.swift in Sources */,
 				8F70E08A204947C200AE2BBE /* Dwarf.swift in Sources */,
 				8FC9A1032047F34D0005C513 /* main.swift in Sources */,

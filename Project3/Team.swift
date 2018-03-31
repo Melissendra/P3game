@@ -83,15 +83,16 @@ class Team {
         }
     }
     
-    func characterLife() {
-        for i in 0..<3 {
-            let character = characters[i]
-            if character.life > 0 {
-               print("\(character.name) has \(character.life)")
+    func isDead() -> Bool{
+        var isDead = false
+        for character in characters {
+            if character.life == 0 {
+                isDead = true
             }else {
-                print("Your team is dead!")
+                return false
             }
         }
+        return isDead
     }
 }
 
