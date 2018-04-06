@@ -10,6 +10,7 @@ import Foundation
 
 class Team {
     var characters = [Character]()
+    var uniqueCharacterNames = [String]()
     
     // create first team
     func createCharacter() -> Character? {
@@ -35,11 +36,11 @@ class Team {
         
         print("Enter your character's name : ")
         
-        repeat {
-            characterName = Input.inputString()
-            
-        } while characterName == ""
-        
+//        repeat {
+//            characterName = Input.inputString()
+//
+//        } while characterName == ""
+        characterName = uniqueName()
         switch userChoice {
         case 1:
             let magus = WhiteMage(name: characterName)
@@ -69,7 +70,7 @@ class Team {
     }
     
     //characters description
-    func characterAttributes () {
+    func characterAttributes() {
         if characters.count > 0 {
             print("")
             print("=======================")
@@ -88,13 +89,26 @@ class Team {
         for character in characters {
             if character.life == 0 {
                 isDead = true
+                print("\(character.name) is dead!")
             }else {
                 return false
             }
         }
         return isDead
     }
+    func uniqueName() -> String {
+        var characterName = ""
+        repeat {
+            characterName = Input.inputString()
+            if uniqueCharacterNames.contains(characterName) {
+                print("Choose another name, this one is already taken!")
+                characterName = ""
+            }else {
+                uniqueCharacterNames.append(characterName)
+            }            
+        } while characterName == ""
+        return characterName
+    }
 }
-
 
 

@@ -15,7 +15,7 @@ class WhiteMage: Character {
     
     func heal(target:Character) {
         target.life += weapon.healingStrength
-        if target.life == lifeMax {
+        if target.life > lifeMax {
             target.life = lifeMax
         }
         print("you healed \(weapon.healingStrength) pv to \(target.name)!")

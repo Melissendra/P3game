@@ -10,6 +10,6 @@ import Foundation
 
 class TwoHandsGlave: Weapon {
     init() {
-       super.init(type: "TwoHandsGlave", damage: 40, healingStrength: 0)
+       super.init(type: "TwoHandsGlave", damage: 100, healingStrength: 0)
     }
 }
