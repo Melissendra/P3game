@@ -10,8 +10,6 @@ import Foundation
 
 class Game {
     var teams = [Team]()
-    
-    
 // function to say hello and present what is expect to players
     func home() {
         print("Hello ! Here you'll be inviting to choose your equip ! Each equip must contains 3 differents characters. To help you in your choice here are theirs features and singularity ! ")
@@ -38,7 +36,11 @@ class Game {
     func characterChoice() -> Int {
         var playerChoice = 0
         repeat {
-            playerChoice = Input.inputInt()
+            if let data = readLine() {
+                if let dataToInt = Int(data) {
+                    playerChoice = dataToInt
+                }
+            }
         } while playerChoice != 1 && playerChoice != 2 && playerChoice != 3
         return playerChoice
     }
@@ -107,7 +109,7 @@ class Game {
                         if blackMageCanPop(team: teams[i]) {
                             let randomNumber = arc4random_uniform(15)
                             if randomNumber < 5 {
-                                let blackMage = BlackMage()
+                                let blackMage = BlackMage(name: "BlackMage")
                                 blackMage.attack(target: adversary)
                             }else {
                                 character.attack(target: adversary)
@@ -139,7 +141,7 @@ class Game {
                         if blackMageCanPop(team: teams[i]) {
                             let randomNumber = arc4random_uniform(15)
                             if randomNumber < 5 {
-                                let blackMage = BlackMage()
+                                let blackMage = BlackMage(name: "Blackmage")
                                 blackMage.attack(target: adversary)
                             }else {
                                 character.attack(target: adversary)

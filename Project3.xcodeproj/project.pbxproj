@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F325D232077B1CE00626882 /* UniqueName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F325D222077B1CE00626882 /* UniqueName.swift */; };
 		8F68964C20498E11002F5944 /* Glave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F68964B20498E11002F5944 /* Glave.swift */; };
 		8F68964E20499000002F5944 /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F68964D20499000002F5944 /* Staff.swift */; };
 		8F68965020499132002F5944 /* FigthingStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F68964F20499132002F5944 /* FigthingStick.swift */; };
@@ -22,7 +23,6 @@
 		8FC9A1102047F4A30005C513 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9A10F2047F4A30005C513 /* Character.swift */; };
 		8FCA0F5520726531005A3E6F /* BlackMage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA0F5420726531005A3E6F /* BlackMage.swift */; };
 		8FCA0F57207265B6005A3E6F /* FireStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA0F56207265B6005A3E6F /* FireStaff.swift */; };
-		8FFA2D72205BC427000B2671 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA2D71205BC427000B2671 /* Input.swift */; };
 		8FFEF10B206A713B003BF8AD /* TwoHandsGlave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFEF10A206A713B003BF8AD /* TwoHandsGlave.swift */; };
 		8FFEF10D206A71D6003BF8AD /* AshStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFEF10C206A71D6003BF8AD /* AshStaff.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8F325D222077B1CE00626882 /* UniqueName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueName.swift; sourceTree = "<group>"; };
 		8F68964B20498E11002F5944 /* Glave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glave.swift; sourceTree = "<group>"; };
 		8F68964D20499000002F5944 /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
 		8F68964F20499132002F5944 /* FigthingStick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigthingStick.swift; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		8FC9A10F2047F4A30005C513 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		8FCA0F5420726531005A3E6F /* BlackMage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMage.swift; sourceTree = "<group>"; };
 		8FCA0F56207265B6005A3E6F /* FireStaff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStaff.swift; sourceTree = "<group>"; };
-		8FFA2D71205BC427000B2671 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		8FFEF10A206A713B003BF8AD /* TwoHandsGlave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoHandsGlave.swift; sourceTree = "<group>"; };
 		8FFEF10C206A71D6003BF8AD /* AshStaff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AshStaff.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,7 +130,7 @@
 			children = (
 				8FC9A1022047F34D0005C513 /* main.swift */,
 				8F79E2B32051990F0022884D /* Team.swift */,
-				8FFA2D71205BC427000B2671 /* Input.swift */,
+				8F325D222077B1CE00626882 /* UniqueName.swift */,
 				8F689655204999D7002F5944 /* Game */,
 				8F80F4D9204862A000932B20 /* Character */,
 			);
@@ -195,7 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FFA2D72205BC427000B2671 /* Input.swift in Sources */,
+				8F325D232077B1CE00626882 /* UniqueName.swift in Sources */,
 				8F68964E20499000002F5944 /* Staff.swift in Sources */,
 				8FC9A10C2047F4230005C513 /* Warrior.swift in Sources */,
 				8F79E2B42051990F0022884D /* Team.swift in Sources */,

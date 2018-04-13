@@ -9,7 +9,7 @@
 import Foundation
 
 class BlackMage: Character {
-    init() {
+    init(name: String) {
         super.init(name: "BlackMage", type: "BlackMage", life: 60, weapon: FireStaff(), lifeMax: 60)
     }
 }

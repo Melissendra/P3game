@@ -16,7 +16,6 @@ class Team {
     func createCharacter() -> Character? {
         var userChoice = 0
         var character: Character?
-        var characterName = ""
         
         print("")
         print("======================================================")
@@ -31,28 +30,28 @@ class Team {
         
         
         repeat {
-            userChoice = Input.inputInt()
+            if let data = readLine() {
+                if let dataToInt = Int(data) {
+                    userChoice = dataToInt
+                }
+            }
         } while userChoice != 1 && userChoice != 2 && userChoice != 3 && userChoice != 4
         
         print("Enter your character's name : ")
+
         
-//        repeat {
-//            characterName = Input.inputString()
-//
-//        } while characterName == ""
-        characterName = uniqueName()
         switch userChoice {
         case 1:
-            let magus = WhiteMage(name: characterName)
+            let magus = WhiteMage(name: UniqueName.sharedInstance.uniqueName())
             character = magus
         case 2:
-            let behemoth = Colossus(name: characterName)
+            let behemoth = Colossus(name: UniqueName.sharedInstance.uniqueName())
             character = behemoth
         case 3:
-            let gnome = Dwarf(name: characterName)
+            let gnome = Dwarf(name: UniqueName.sharedInstance.uniqueName())
             character =  gnome
         case 4:
-            let gladiator = Warrior(name: characterName)
+            let gladiator = Warrior(name: UniqueName.sharedInstance.uniqueName())
             character = gladiator
         default:
             break
@@ -95,19 +94,6 @@ class Team {
             }
         }
         return isDead
-    }
-    func uniqueName() -> String {
-        var characterName = ""
-        repeat {
-            characterName = Input.inputString()
-            if uniqueCharacterNames.contains(characterName) {
-                print("Choose another name, this one is already taken!")
-                characterName = ""
-            }else {
-                uniqueCharacterNames.append(characterName)
-            }            
-        } while characterName == ""
-        return characterName
     }
 }
 
