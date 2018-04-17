@@ -8,8 +8,10 @@
 
 import Foundation
 
+// My character bonus 
 class BlackMage: Character {
     init(name: String) {
         super.init(name: "BlackMage", type: "BlackMage", life: 60, weapon: FireStaff(), lifeMax: 60)
-    }
+    }    
 }
+

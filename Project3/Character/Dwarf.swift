@@ -8,6 +8,7 @@
 
 import Foundation
 
+// My little man with his big axe which gives a lot of damages
 class Dwarf: Character {
     init(name: String) {
         super.init(name: name, type: "Dwarf", life: 80, weapon: Axe(), lifeMax: 80)

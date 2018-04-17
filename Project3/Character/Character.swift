@@ -24,11 +24,14 @@ class Character {
         self.lifeMax = lifeMax
         self.weapon = weapon
     }
-
+    
+// Character's descritpion whith it's specificities
     func description(index: Int){
         print("")
         print("\(index)." + "\(name)" + ": \(type)" + "- \(lifeMax) pv" + " - Weapon: \(weapon.type)" + " - Damage: \(weapon.damage)" + " - HealingStrength: \(weapon.healingStrength)")
     }
+    
+// For attacking the adversary when it's an tank
     func attack(target: Character) {
         target.life -= weapon.damage
         if target.life < 0  {

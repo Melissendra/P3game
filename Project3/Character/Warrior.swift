@@ -8,6 +8,7 @@
 
 import Foundation
 
+// My major tank
 class Warrior: Character {
     init(name: String) {
         super.init(name: name,type: "Warrior", life: 100, weapon: Glave(), lifeMax: 100)

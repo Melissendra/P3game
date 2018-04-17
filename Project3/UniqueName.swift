@@ -8,6 +8,7 @@
 
 import Foundation
 
+// creation of a singleton pattern for giving a uniqu nname to the two teams' characters
  class UniqueName {
     static let sharedInstance = UniqueName()
     
@@ -15,6 +16,7 @@ import Foundation
     
     private init() {}
     
+// function that is going to be called in class Game for giving a unique name to character.
     func uniqueName() -> String {
         var characterName = ""
         repeat {

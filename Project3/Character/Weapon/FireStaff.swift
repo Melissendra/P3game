@@ -7,6 +7,7 @@
 //
 
 import Foundation
+// BlackMagus's weapon
 class FireStaff: Weapon {
     init() {
         super.init(type: "FireStaff", damage: 300, healingStrength: 0)

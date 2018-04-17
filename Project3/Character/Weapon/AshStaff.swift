@@ -8,6 +8,7 @@
 
 import Foundation
 
+// WhiteMage's weapon in the chest
 class AshStaff: Weapon {
     init() {
         super.init(type: "AshStaff", damage: 0, healingStrength: 50)

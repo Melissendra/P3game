@@ -8,11 +8,12 @@
 
 import Foundation
 
+// Class where you create the function for creating your teams, with the specificities of each character
 class Team {
     var characters = [Character]()
     var uniqueCharacterNames = [String]()
     
-    // create first team
+    // Create first team
     func createCharacter() -> Character? {
         var userChoice = 0
         var character: Character?
@@ -22,13 +23,13 @@ class Team {
         print("For forming your equip, you must choose 3 characters differents. What are they?")
         print("Choose the 3 characters you want:")
         print("1. Magus: he'll cure you when necessary.")
-        print("2. Behemoth: he'll frigthen your adversary by his height but he doesn't have a lot of strenght !")
-        print("3. Gnome: if he isn't impressive whith is size but his axe'll give a lot pf damage !")
-        print("4. Gladiator: he is a classic: good fighter, not exceptionel but good znd give good damage ! ")
+        print("2. Behemoth: he'll frigthen your adversary by his height but he doesn't have a lot of strenght.")
+        print("3. Gnome: if he isn't impressive whith is size but his axe'll give a lot pf damage.")
+        print("4. Gladiator: he is a classic: good fighter, not exceptionel but good znd give good damage.")
         print("")
         print("======================================================")
         
-        
+        // To control optional and authorised the transformation data to Int
         repeat {
             if let data = readLine() {
                 if let dataToInt = Int(data) {
@@ -39,6 +40,7 @@ class Team {
         
         print("Enter your character's name : ")
 
+        // The first player must choose his team
         
         switch userChoice {
         case 1:
@@ -59,7 +61,7 @@ class Team {
         return character
     }
     
-    // create second team
+    // The second player must choose his team
     
     func createCharacters() {
         for _ in 0..<3 {
@@ -68,7 +70,7 @@ class Team {
         }
     }
     
-    //characters description
+    // Characters' description
     func characterAttributes() {
         if characters.count > 0 {
             print("")
@@ -83,6 +85,7 @@ class Team {
         }
     }
     
+    // To name which character is dead, if is dead.
     func isDead() -> Bool{
         var isDead = false
         for character in characters {
