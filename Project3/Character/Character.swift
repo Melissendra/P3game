@@ -28,7 +28,7 @@ class Character {
 // Character's descritpion whith it's specificities
     func description(index: Int){
         print("")
-        print("\(index)." + "\(name)" + ": \(type)" + "- \(lifeMax) pv" + " - Weapon: \(weapon.type)" + " - Damage: \(weapon.damage)" + " - HealingStrength: \(weapon.healingStrength)")
+        print("\(index)." + "\(name)" + ": \(type)" + "- \(life) pv" + " - Weapon: \(weapon.type)" + " - Damage: \(weapon.damage)" + " - HealingStrength: \(weapon.healingStrength)")
     }
     
 // For attacking the adversary when it's an tank

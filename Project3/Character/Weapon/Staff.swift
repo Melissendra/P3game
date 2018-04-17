@@ -12,6 +12,6 @@ import Foundation
 
 class Staff: Weapon {
     init() {
-        super.init(type: "Staff", damage: 3, healingStrength: 30)
+        super.init(type: "Staff", damage: 0, healingStrength: 30)
     }
 }

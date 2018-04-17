@@ -92,10 +92,11 @@ class Game {
                         // Choose the character team 1 wants to attack
                         print("")
                         print("Choose which characer you want to attack:")
-                        
                         let adversary = teams[i + 1].characters[characterChoice() - 1]
-
-                    // Bonus random pop with some condition
+                        // Attack the playerchoice
+                        character.attack(target: adversary)
+                        
+                        // Bonus random pop with some condition
                         if blackMageCanPop(team: teams[i]) {
                             let randomNumber = arc4random_uniform(10)
                             if randomNumber < 5 {
@@ -109,6 +110,8 @@ class Game {
                         
                         if teams[i + 1].isDead() {
                             print("The second team is dead! you win!")
+                            // You start a new game
+                            start()
                             return
                         }
                         print("")
@@ -123,7 +126,9 @@ class Game {
                         print("Choose which characer you want to attack:")
                     
                         let adversary = teams[i - 1].characters[characterChoice() - 1]
-    
+                        // Attack the playerchoice's character
+                        character.attack(target: adversary)
+                        
                         if blackMageCanPop(team: teams[i]) {
                             let randomNumber = arc4random_uniform(15)
                             if randomNumber < 5 {
@@ -136,6 +141,8 @@ class Game {
                         }
                         if teams[i - 1].isDead() {
                             print("you loose!!! The winner is Team 2 !!!!")
+                            // You start a new game
+                            start()
                             return
                         }
                         print("")
