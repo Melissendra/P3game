@@ -33,10 +33,14 @@ class Character {
     
 // For attacking the adversary when it's an tank
     func attack(target: Character) {
-        target.life -= weapon.damage
-        if target.life < 0  {
-            target.life = 0
+        if life > 0 {
+            target.life -= weapon.damage
+            if target.life < 0  {
+                target.life = 0
+            }
+            print("You take \(weapon.damage)pv to \(target.name)")
+        }else {
+            print("I can't attack! I'm dead!!!")
         }
-        print("You take \(weapon.damage)pv to \(target.name)")
     }
 }

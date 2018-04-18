@@ -13,6 +13,7 @@ class Game {
 // function to say hello and present what is expect to players
     
     func home() {
+        print("")
         print("Hello ! Here you'll be inviting to choose your equip ! Each equip must contains 3 differents characters. To help you in your choice here are theirs features and singularities! ")
     }
 
@@ -69,49 +70,28 @@ class Game {
                     //random pop of the chest bonus
                 chest(character: character)
                 
-                    // The player's choice : Magus or attacker?
+                    // The player's choice : Magus or assailant?
                 
                 if let whiteMage = character as? WhiteMage {
                     
                     // if it's a magus list teams one
                     teams[i].characterAttributes()
                     print("")
-                    print(" Choose who you want to heal :")
+                    print("Choose who you want to heal :")
                 
                     // heal the character
                     whiteMage.heal(target: teams[i].characters[characterChoice() - 1])
                     
                 }else {
-                    // show adversary team if it's an attacker
+                    // show adversary team if it's an assailant
                       print("Here is your adversary team!")
                     
                     if i == 0 {
                       
-                        teams[i + 1].characterAttributes()
-                        
-                        // Choose the character team 1 wants to attack
-                        print("")
-                        print("Choose which characer you want to attack:")
-                        let adversary = teams[i + 1].characters[characterChoice() - 1]
-                        // Attack the playerchoice
-                        character.attack(target: adversary)
-                        
-                        // Bonus random pop with some condition
-                        if blackMageCanPop(team: teams[i]) {
-                            let randomNumber = arc4random_uniform(10)
-                            if randomNumber < 5 {
-                                print("A BlackMagus just pop in your team!!")
-                                let blackMage = BlackMage(name: "BlackMage")
-                                blackMage.attack(target: adversary)
-                            }else {
-                                character.attack(target: adversary)
-                            }
-                        }
+                        followingFight(index: i, aggressor: character)
                         
                         if teams[i + 1].isDead() {
                             print("The second team is dead! you win!")
-                            // You start a new game
-                            start()
                             return
                         }
                         print("")
@@ -119,30 +99,10 @@ class Game {
                     }else {
                         
                         // It's an attacker, show second team's characters
-                        teams[i - 1].characterAttributes()
+                        followingFight(index: i, aggressor: character)
                         
-                        // select the adverdsary you want to attack
-                        print("")
-                        print("Choose which characer you want to attack:")
-                    
-                        let adversary = teams[i - 1].characters[characterChoice() - 1]
-                        // Attack the playerchoice's character
-                        character.attack(target: adversary)
-                        
-                        if blackMageCanPop(team: teams[i]) {
-                            let randomNumber = arc4random_uniform(15)
-                            if randomNumber < 5 {
-                                print("A BlackMage just pop in your team!!!")
-                                let blackMage = BlackMage(name: "Blackmage")
-                                blackMage.attack(target: adversary)
-                            }else {
-                                character.attack(target: adversary)
-                            }
-                        }
                         if teams[i - 1].isDead() {
                             print("you loose!!! The winner is Team 2 !!!!")
-                            // You start a new game
-                            start()
                             return
                         }
                         print("")
@@ -182,16 +142,29 @@ class Game {
         }
     }
     
-//    func randomBlackMagePop(team: Team){
-//        let randomNumber = arc4random_uniform(15)
-//        var character = Character
-//        if randomNumber < 5 {
-//            let blackMage = BlackMage(name: "Blackmage")
-//            blackMage.attack(target: team.characters[characterChoice()])
-//        }else {
-//            character.attack(team.characters[characterChoice()])
-//        }
-//    }
+    func followingFight(index: Int, aggressor: Character) {
+        teams[index + 1].characterAttributes()
+        
+        // Choose the character team 1 wants to attack
+        print("")
+        print("Choose which characer you want to attack:")
+        let adversary = teams[index + 1].characters[characterChoice() - 1]
+        // Attack the playerchoice
+        
+        // Bonus random pop with some condition
+        if blackMageCanPop(team: teams[index]) {
+            let randomNumber = arc4random_uniform(10)
+            if randomNumber < 5 {
+                print("A BlackMagus just pop in your team!!")
+                let blackMage = BlackMage(name: "BlackMage")
+                blackMage.attack(target: adversary)
+            }else {
+                aggressor.attack(target: adversary)
+            }
+        }else {
+            aggressor.attack(target: adversary)
+        }
+    }
 }
 
 

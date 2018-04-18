@@ -16,10 +16,14 @@ class WhiteMage: Character {
   
 // To heal the taget you choose
     func heal(target:Character) {
-        target.life += weapon.healingStrength
-        if target.life > lifeMax {
-            target.life = lifeMax
+        if life > 0 {
+            target.life += weapon.healingStrength
+            if target.life > lifeMax {
+                target.life = lifeMax
+            }
+            print("you healed \(weapon.healingStrength) pv to \(target.name)!")
+        }else {
+            print("Sorry, I can't heal! I'm dead!")
         }
-        print("you healed \(weapon.healingStrength) pv to \(target.name)!")
     }
 }
