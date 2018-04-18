@@ -11,6 +11,6 @@ import Foundation
 // My giant who is imposant, resistant but don't have a lot of strength
 class Colossus: Character {
     init(name: String) {
-        super.init(name: name, type: "Colossus", life: 100, weapon: FightingStick(), lifeMax: 200)
+        super.init(name: name, type: "Colossus", life: 150, weapon: FightingStick(), lifeMax: 150)
     }
 }
