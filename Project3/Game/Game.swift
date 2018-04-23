@@ -70,11 +70,11 @@ class Game {
                     //random pop of the chest bonus
                 chest(character: character)
                 
-                    // The player's choice : Magus or assailant?
+                    // The player's choice : Healer or assailant?
                 
                 if let whiteMage = character as? WhiteMage {
                     
-                    // if it's a magus list teams one
+                    // if it's a healer, list teams one
                     teams[i].characterAttributes()
                     print("")
                     print("Choose who you want to heal :")
@@ -88,7 +88,7 @@ class Game {
                     
                     if i == 0 {
                       
-                        followingFight(index: i, aggressor: character)
+                        followingFight(index: i, assailant: character)
                         
                         if teams[i + 1].isDead() {
                             print("The second team is dead! you win!")
@@ -98,8 +98,8 @@ class Game {
                         
                     }else {
                         
-                        // It's an attacker, show second team's characters
-                        followingFight(index: i, aggressor: character)
+                        // It's an assailant, show second team's characters
+                        followingFight(index: i, assailant: character)
                         
                         if teams[i - 1].isDead() {
                             print("you loose!!! The winner is Team 2 !!!!")
@@ -142,10 +142,10 @@ class Game {
         }
     }
     
-    func followingFight(index: Int, aggressor: Character) {
+    func followingFight(index: Int, assailant: Character) {
         teams[index + 1].characterAttributes()
         
-        // Choose the character team 1 wants to attack
+        // Choose the character team One wants to attack
         print("")
         print("Choose which characer you want to attack:")
         let adversary = teams[index + 1].characters[characterChoice() - 1]
@@ -159,10 +159,10 @@ class Game {
                 let blackMage = BlackMage(name: "BlackMage")
                 blackMage.attack(target: adversary)
             }else {
-                aggressor.attack(target: adversary)
+                assailant.attack(target: adversary)
             }
         }else {
-            aggressor.attack(target: adversary)
+            assailant.attack(target: adversary)
         }
     }
 }
