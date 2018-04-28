@@ -12,7 +12,7 @@ import Foundation
 
 class FightingStick: Weapon {
     init() {
-        super.init(type: "FightingStick", damage: 8, healingStrength: 0)
+        super.init(type: "FightingStick", damage: 200, healingStrength: 0)
     }
 }
 

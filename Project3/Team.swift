@@ -11,10 +11,9 @@ import Foundation
 // Class where you create the function for creating your teams, with the specificities of each character
 class Team {
     var characters = [Character]()
-    var uniqueCharacterNames = [String]()
     
     // Create first team
-    func createCharacter() -> Character? {
+  private func createCharacter() -> Character? {
         var userChoice = 0
         var character: Character?
         

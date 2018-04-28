@@ -11,6 +11,6 @@ import Foundation
 // tank's weapon in the chest
 class TwoHandsGlave: Weapon {
     init() {
-       super.init(type: "TwoHandsGlave", damage: 70, healingStrength: 0)
+       super.init(type: "TwoHandsGlave", damage: 200, healingStrength: 0)
     }
 }
