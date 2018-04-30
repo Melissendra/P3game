@@ -35,6 +35,8 @@ class Team {
             if let data = readLine() {
                 if let dataToInt = Int(data) {
                     userChoice = dataToInt
+                }else {
+                    print("Please choose a number between 1 and 4:")
                 }
                 if userChoice > 4 {
                     print("You choose a wrong number ! Please choose a number between 1 and 4 :")
